@@ -69,6 +69,13 @@ title.innerHTML = siteContent['cta']['h1']
 
 const button = document.querySelector('button')
 button.textContent = siteContent['cta']['button']
+button.style.background = "blue";
+button.style.color = "white"
+button.style.border = "5px solid black"
+
+button.addEventListener('click', (evt) => {
+  evt.target.style.background = 'red'
+});
 
 const ctaImage = document.querySelector('#cta-img')
 console.log(ctaImage);
@@ -130,3 +137,5 @@ contactEmail.innerHTML = siteContent['contact']['email']
 const footer = document.querySelector('footer');
 const footerP = footer.querySelector('p');
 footerP.innerHTML = siteContent['footer']['copyright'];
+
+footerP.style.textDecoration = "underline";
